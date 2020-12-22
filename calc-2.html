@@ -1,0 +1,144 @@
+<!--Javascript calculator to perform
+SUM, MUL, DIV, ADD
+-->
+<!DOCTYPE html>
+<html>
+<head><title>WEB LAB PGM1</title>
+    <style>
+        body{
+            text-align:center;
+            background-color:greenyellow;
+            }
+         .title{
+             border-radius: 45px;
+             margin-bottom: 30px;
+             text-align: center;
+             padding: 14px 13px;
+             width: 1000px;
+             color: red;
+             background-color: rgb(28, 150, 187);
+             border:solid black 2px;
+         }
+         input[type="text"]{
+             border-radius: 10px;
+             text-align: right;
+             padding: 10px 6px;
+             background-color: gold;
+             width: 94%;
+         }
+        input[type="button"]{
+            border-radius: 20px;
+            background-color:blue;
+            color: white;
+            padding: 20px 40px;
+            border-color: white;
+            width:auto;
+            
+        }
+        .tit{
+             border-radius: 45px;
+             margin-bottom: 30px;
+             text-align: center;
+             padding: 4px 3px;
+             width: 150px;
+             color: red;
+             background-color: pink;
+             border:solid black 3px;
+         }
+    </style>
+    <script>
+          function disp(val){
+              document.getElementById('lab').value+=val;
+
+          }
+          function clr(){
+              document.getElementById('lab').value=" ";
+          }
+
+          function solve(){
+             let x= document.getElementById('lab').value;
+             let y=eval(x);
+             document.getElementById("lab").value=y
+          }
+    </script>
+</head>
+<body>
+   
+   <div class="title">SDM ____JAVASCRIPT__ LABPROGRAMME__</div>
+    
+<!--Ceate a table-->
+<center>
+ <table border="10">
+    <tr>
+        <td>
+            <input type="button" value="CE" onclick="clr()">
+        </td>
+        <td colspan="4">
+            <input type="text" id="lab">
+        </td>
+    </tr>
+    <!-- creating buttons and assign values to it-->
+    <tr>
+        <td>
+            <input type="button" value="+" onclick="disp('+')">
+        </td>
+        <td>
+            <input type="button" value="1" onclick="disp('1')" >
+        </td>
+        <td>
+            <input type="button" value="2" onclick="disp('2')">
+        </td>
+        <td>
+            <input type="button" value="3" onclick="disp('3')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="-" onclick="disp('-')">
+        </td>
+        <td>
+            <input type="button" value="4" onclick="disp('4')">
+        </td>
+        <td>
+            <input type="button" value="5" onclick="disp('5')">
+        </td>
+        <td>
+            <input type="button" value="6" onclick="disp('6')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="*" onclick="disp('*')">
+        </td>
+        <td>
+            <input type="button" value="7" onclick="disp('7')">
+        </td>
+        <td>
+            <input type="button" value="8"onclick="disp('8')">
+        </td>
+        <td>
+            <input type="button" value="9" onclick="disp('9')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="/" onclick="disp('/')">
+        </td>
+        <td>
+            <input type="button" value="." onclick="disp('.')">
+        </td>
+        <td>
+            <input type="button" value="0" onclick="disp('0')">
+        </td>
+        <td>
+            <input type="button" value="=" onclick="solve()"  >
+        </td>
+    </tr>
+ </table>
+</center>
+
+ <div class="tit">NAME:DIVYASHRI</div>
+<div class="tit">USN:4SU17CS018</div>
+
+</body>
+</html>
